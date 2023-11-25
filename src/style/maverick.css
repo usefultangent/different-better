@@ -1,3 +1,83 @@
+@layer inherit, reset, default, themes, layouts, components, utilities;
+
+@layouts {
+
+
+}
+
+@layer themes {
+  :root {
+    /* Color styles */
+    --primary: hsl(265, 38%, 13%);
+    --secondary: hsl(283, 6%, 45%);
+    --tertiary: hsl(257, 15%, 91%);
+    --light: hsl(270, 100%, 99%);
+    --accent: hsl(278, 100%, 92%);
+    --accent--alt: hsl(279, 100%, 97%);
+    --accent--ui: hsl(284, 55%, 66%);
+  }
+}
+
+@layer default {
+
+  * {
+    box-sizing: border-box;
+  }
+  
+}
+
+@layer reset {
+  /* Default links not scoped with a class get a relatively-sized underline */
+  a:not([class]) {
+    text-decoration-thickness: max(0.08em, 1px);
+    text-underline-offset: 0.15em;
+  }
+
+  /* Add focus style only when it's actually visible */
+  :focus-visible {
+    --outline-size: max(2px, 0.15em);
+  
+    outline: var(--outline-width, var(--outline-size)) var(--outline-style, solid)
+      var(--outline-color, currentColor);
+    outline-offset: var(--outline-offset, var(--outline-size));
+  }
+
+  /* Scroll padding allowance above anchor links */
+  :target {
+    scroll-padding-block-start: 2rem;
+  }
+  /* Scroll padding allowance below focused elements 
+  to ensure they are clearly in view */
+  :focus {
+    scroll-padding-block-end: 8vh;
+  }
+
+  * {
+    margin:0;
+  }
+
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input, button, textarea, select {
+    font: inherit;
+  }
+
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+
+}
+
+@layer inherit {
+
 /* mav_normalize.css */
 /* (CC) 2007 Maverick Construction, courtesy of Andy Clarke and Transcending CSS  */
 /*   http://creativecommons.org/licenses/by/2.0                   */
@@ -247,3 +327,5 @@ body {
   p.shrink { font-size:130%; }
   
   p.shrinker { font-size:110%; }  
+
+}
