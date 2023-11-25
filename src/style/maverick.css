@@ -1,0 +1,249 @@
+/* mav_normalize.css */
+/* (CC) 2007 Maverick Construction, courtesy of Andy Clarke and Transcending CSS  */
+/*   http://creativecommons.org/licenses/by/2.0                   */
+/* This style sheet is licensed under a Creative Commons License. */
+
+/* normalizes font-size for headers */
+h1, h2, h3, h4, h5, h6
+{font-size: 100%; }
+
+/* removes list style from lists */
+ol, ul
+{ list-style: none; }
+
+/* normalizes font-style and font-weight */
+address, caption, cite, code, dfn, em, strong, th, var
+{ font-style: normal; font-weight: normal; }
+
+/* removes border from fieldset and img */
+fieldset, img
+{ border: 0; }
+
+/* left aligns text in caption and th */
+caption, th
+{ text-align: left; }
+
+/* remove the inconsistent (among browsers) default ul,ol padding or margin  */
+/* the default spacing on headings does not match nor align with 
+   normal interline spacing at all, so let's get rid of it. */
+/* zero out the spacing around pre, form, body, html, p, blockquote as well */
+/* form elements are oddly inconsistent, and not quite CSS emulatable. */
+/*  nonetheless strip their margin and padding as well */
+ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input
+{ margin:0; padding:0 }
+
+/* whoever thought blue linked image borders were a good idea? */
+a img,:link img,:visited img { border:none }
+
+/* de-italicize address */
+address { font-style:normal }
+
+/* Maverick Construction Layout */
+
+html { height:100%; }
+
+body {
+height:100%;
+text-align: center; }
+
+div#wrap {
+position: relative;
+width: 980px;
+margin: 0 auto; 
+padding: 0; }
+
+
+div#main-body {
+position:relative;
+clear:both;
+margin-top:5px;
+width: 980px;
+height: 525px; 
+border: 5px double; }
+
+div#content {
+float: right;
+width: 500px;
+margin-top: 1.25%;
+margin-right: 1.25%;
+padding: 1em;
+border: 1px solid;	
+filter:alpha(opacity=75);
+opacity:0.75;
+-moz-opacity:0.75; }
+
+div#content_noquote {
+float: right;
+width: 500px;
+height: 475px;
+margin-top: 1.25%;
+margin-right: 1.25%;
+padding: 1em;
+border: 1px solid;	
+filter:alpha(opacity=75);
+opacity:0.75;
+-moz-opacity:0.75; }
+
+div#letter {
+float:right;
+width:400px;
+margin-top:2%;
+margin-right:2%;
+padding:1em;
+border: 1px solid;
+height: 425px;
+overflow: auto;
+background-color:#fff; }
+
+.branding {
+display:block;
+float:left; 
+margin-top:2%;
+margin-left:2%;
+background-color:#444;}
+
+/* BG images - Landscapes */
+div.page_home { background:url(../images/bg_park.jpg) no-repeat bottom right; }
+div.page_tips { background:url(../images/bg_beach.jpg) no-repeat bottom right; }
+div.page_smooth { background:url(../images/bg_copa.jpg) no-repeat bottom right; }
+div.page_finishing { background:url(../images/bg_roof.jpg) no-repeat bottom right; }
+div.page_testimonials { background:url(../images/bg_rose.jpg) no-repeat bottom right; }
+div.page_gallery { background:url(../images/bg_pier.jpg) no-repeat bottom right; }
+div.page_about { background:url(../images/bg_wood.jpg) no-repeat bottom right; }
+div.page_contact { background:url(../images/bg_foot.jpg) no-repeat bottom right; }
+div.page_subgallery { background:url(../images/bg_waves.jpg) no-repeat bottom right; }
+div.page_links { background:url(../images/bg_pool.jpg) no-repeat bottom right; }
+
+
+/* dynamic instructions to allow for text scrolling */
+div.scrollable { 
+height: 400px;
+overflow: auto; }
+
+
+/* for pages without quotes */
+div.extend { height: 470px; }
+
+/* formatting for testimonials */
+.testimonial {
+margin-left:11%;
+margin-right:4%;
+font-style:italic;
+font-size:125%;
+text-align:right; }
+
+.testimonial a, a:link, a:visited {
+text-decoration:none; 
+font-weight:bold;
+text-color:#000; }
+
+/* formatting for links page */
+.links {
+margin-left:10%;
+margin-right:12%;
+font-size:115%;
+text-align:right; }
+
+.links a, a:link, a:visited {
+text-decoration:none; 
+text-color:#00f; }
+
+.links strong { font-weight:bold; }
+
+
+div#footer {
+clear: both;
+height: 10em;
+width: 980px;
+border: 1px solid; }
+
+.fbPage {position:absolute; bottom:5px; left:5px;}
+
+#licNum {position:absolute; bottom:10px; left:180px; font-size:12px; font-weight:bold; color:#333;}
+
+/* CSS Document */
+
+#navmenu {
+  position:relative;
+  margin: 0 0 0 12.5px;
+  padding-bottom: 5px;
+  font-size:16px; }
+  
+  #navmenu ul li { float: left;} /* lists aligned to the left */
+  
+  #navmenu a, span {
+       width: auto; /* definition of menu button size */
+       float: left;
+       display: block;
+     padding: 2px 10px;
+       text-align: center;
+       border: 3px double #000;
+       text-decoration: none;
+       color: #fff;
+       background: #999;
+     font-weight:bold;
+     font-family:"Times New Roman", Times, serif;
+       }
+     
+  #navmenu a:hover {
+    color:#444;
+    background: #fff;   }
+  
+  #navmenu a:active, .chosen {
+       background-color:#666;
+       border-color:#fff; 
+       color: #fff;
+       }
+
+
+/* Maverick Construction Color */
+body {
+  background-color: #444;
+  color: #000; }
+  
+  div#wrap { color: #000; }
+  
+  div#main-body {
+  background-color: #fff; 
+  border-color: #000; }
+  
+  div#content {
+  color: #000;
+  border-color: #aaa;
+  background-color: #fff; }
+  
+  div#footer {
+  border-color: #000;
+  background-color:#444;
+  }
+
+
+/* Maverick Construction Typography */
+
+body {
+  font-family: verdana, helvetica, sans-serif; 
+  font-size: 85%; }
+  
+  h2 {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 200%; }
+  
+  h3 {
+  font-family: "Times New Roman", Times, serif; 
+  font-size:160%; }
+  
+  h4 {
+  font-family:"Times New Roman", Times, serif;
+  font-size:100%;
+  font-weight:bold;
+  text-align:left; 
+  margin-left:7.5%;}
+  
+  p {
+  text-align:left;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 150%; }
+  
+  p.shrink { font-size:130%; }
+  
+  p.shrinker { font-size:110%; }  
